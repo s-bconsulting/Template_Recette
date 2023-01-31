@@ -17,3 +17,9 @@ jobs:
         #keyword: # optional, default is /copy
         # Content of newly created issue
         #contentOfNewIssue: github.event.issue.body # optional, default is 
+    - name: clone
+      uses: dpanayotov/issue-cloner@v0.2
+      with:
+        label: "bug"
+        targetRepo: ${{ SECRETS.ADO_PROJECT }}
+        token: ${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}
