@@ -2,13 +2,18 @@ on:
   issue_comment:
     types: [created, deleted]
 jobs:
-  uses: soichisumi/issue-copy-action@v0.2.0
-    with:
-      # Github token
-      githubToken:  "${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}"
-      # Repository to which generated issue is copied. format: $OWNER/$REPO_NAME
-      targetRepository: "${{ SECRETS.ADO_PROJECT }}"
-      # Keyword to trigger this action. The action is executed in the case of lowercased issue comment matched with lowercased keyword.
-      #keyword: # optional, default is /copy
-      # Content of newly created issue
-      contentOfNewIssue: github.event.issue.body # optional, default is 
+  alert:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Github Copier
+      uses: soichisumi/issue-copy-action@v0.2.0
+      with:
+        keyword: "/copy"
+        # Github token
+        githubToken:  "${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}"
+        # Repository to which generated issue is copied. format: $OWNER/$REPO_NAME
+        targetRepository: "${{ SECRETS.ADO_PROJECT }}"
+        # Keyword to trigger this action. The action is executed in the case of lowercased issue comment matched with lowercased keyword.
+        #keyword: # optional, default is /copy
+        # Content of newly created issue
+        contentOfNewIssue: github.event.issue.body # optional, default is 
