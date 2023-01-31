@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - name: Github Copier
-      uses: soichisumi/issue-copy-action@v0.2.0
+      uses: supdegrave/issue-copy-action@v1.1.0
       with:
         keyword: "/copy"
         # Github token
