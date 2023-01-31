@@ -6,8 +6,8 @@
     # Github token
     githubToken:  
     # Repository to which generated issue is copied. format: $OWNER/$REPO_NAME
-    targetRepository: 
+    targetRepository: "${{ SECRETS.ADO_PROJECT }}"
     # Keyword to trigger this action. The action is executed in the case of lowercased issue comment matched with lowercased keyword.
-    keyword: # optional, default is /copy
+    #keyword: # optional, default is /copy
     # Content of newly created issue
-    contentOfNewIssue: # optional, default is 
+    # contentOfNewIssue: # optional, default is 
