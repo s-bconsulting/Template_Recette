@@ -12,7 +12,7 @@ jobs:
         # Github token
         githubToken:  "${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}"
         # Repository to which generated issue is copied. format: $OWNER/$REPO_NAME
-        targetRepository: "${{ SECRETS.ADO_PROJECT }}"
+        targetRepository: s-bconsulting/DGFLA
         # Keyword to trigger this action. The action is executed in the case of lowercased issue comment matched with lowercased keyword.
         #keyword: # optional, default is /copy
         # Content of newly created issue
