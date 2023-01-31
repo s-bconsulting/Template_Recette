@@ -1,7 +1,8 @@
 on:
   issue_comment:
     types: [created, deleted]
-    uses: soichisumi/issue-copy-action@v0.2.0
+jobs:
+  uses: soichisumi/issue-copy-action@v0.2.0
     with:
       # Github token
       githubToken:  "${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}"
