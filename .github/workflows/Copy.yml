@@ -1,7 +1,5 @@
 name: Github Issue Copier
-  # You may pin to the exact commit or the version.
-  # uses: soichisumi/issue-copy-action@0da68355f63b8318c7a93d0cecd4578909544bda
-  uses: soichisumi/issue-copy-action@v0.2.0
+uses: soichisumi/issue-copy-action@v0.2.0
   with:
     # Github token
     githubToken:  "${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}"
