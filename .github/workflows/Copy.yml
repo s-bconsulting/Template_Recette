@@ -1,6 +1,9 @@
 on:
-  issue_comment:
-    types: [created, deleted]
+  issues:
+    types:
+      [labeled]
+  #issue_comment:
+  #  types: [created, deleted]
 jobs:
   alert:
     runs-on: ubuntu-latest
