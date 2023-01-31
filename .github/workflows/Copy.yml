@@ -23,6 +23,6 @@ jobs:
     - name: clone
       uses: dpanayotov/issue-cloner@v0.2
       with:
-        label: "bug"
+        label: "clone"
         targetRepo: ${{ SECRETS.ADO_PROJECT }}
         token: ${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}
