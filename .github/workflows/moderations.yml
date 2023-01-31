@@ -1,0 +1,17 @@
+name: Limit interactions
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # Run every day at 00:00, since the limits expire after 24 hours
+    - cron: '0 0 * * *'
+jobs:
+  limit-interactions:
+    runs-on: ubuntu-latest
+    name: Limit GitHub Organization interactions
+    steps:
+      - name: Limit interactions
+        uses: caitlinelfring/action-limit-interactions@v1
+        with:
+          github_token: ${{ SECRETS.GH_PERSONAL_ACCESS_TOKEN }}
+          limit: collaborators_only
+          # org: 'AnotherOwner'
